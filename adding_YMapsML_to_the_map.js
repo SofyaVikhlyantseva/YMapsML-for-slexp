@@ -3,8 +3,8 @@ ymaps.ready(init);
 function init () {
     // Создание экземпляра карты.
     var myMap = new ymaps.Map('map', {
-            center: [55.76, 37.64],
-            zoom: 10
+            center: [61.678423, 96.377965],
+            zoom: 4
         }, {
             searchControlProvider: 'yandex#search'
         });
