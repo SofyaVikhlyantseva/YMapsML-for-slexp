@@ -7,7 +7,7 @@
     <repr:Representation>
         <repr:Style gml:id="img1">
             <repr:iconStyle>
-                <repr:href>'/Users/sofyavikhlyantseva/PycharmProjects/photos_from_hse_ling_expeditions_on_the_map/image_commonStyle.jpg'</repr:href>
+                <repr:href>'image_commonStyle.jpg'</repr:href>
                 <repr:size x="50" y="42"></repr:size>
                 <repr:offset x="-27" y="-16"></repr:offset>
             </repr:iconStyle>
@@ -34,7 +34,7 @@
                 <gml:name>Чудесная природа</gml:name>
                 <gml:metaDataProperty>
                     <ymaps:AnyMetaData>
-                        <img src="/Users/sofyavikhlyantseva/PycharmProjects/photos_from_hse_ling_expeditions_on_the_map/image_balloonTemplate.jpg"/>
+                        <img src="image_balloonTemplate.jpg"/>
                     </ymaps:AnyMetaData>
                 </gml:metaDataProperty>
                 <gml:Point>
