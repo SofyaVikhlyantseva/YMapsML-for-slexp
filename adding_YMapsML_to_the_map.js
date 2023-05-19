@@ -1,21 +1,21 @@
-// Создание обработчика для события window.onLoad
-        YMaps.jQuery(function () {
-            // Создание экземпляра карты и его привязка к созданному контейнеру
-            var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
- 
-            // Установка для карты ее центра и масштаба
-            map.setCenter(new YMaps.GeoPoint(43.998779,56.316537), 13);
-			
-			map.addControl(new YMaps.Zoom());
-	        map.addControl(new YMaps.TypeControl());
-	        map.addControl(new YMaps.ToolBar());
- 
-            // Создание и добавление YMapsML-документа на карту
-            var ml = new YMaps.YMapsML("http://webmap-blog.ru/xml/photo-map.xml");
-            map.addOverlay(ml);
- 
-            // Обработчик неудачной загрузки YMapsML
-            YMaps.Events.observe(ml, ml.Events.Fault, function (ml, error) {
-                alert('Ошибка: ' + error);
-            });
+ymaps.ready(init);
+
+function init () {
+    // Создание экземпляра карты.
+    var myMap = new ymaps.Map('map', {
+            center: [55.76, 37.64],
+            zoom: 10
+        }, {
+            searchControlProvider: 'yandex#search'
         });
+
+    // Загрузка YMapsML-файла.
+    ymaps.geoXml.load('draft.xml')
+        .then(function (res) {
+            // Добавление геообъектов на карту.
+            myMap.geoObjects.add(res.geoObjects);
+           // Вызывается в случае неудачной загрузки YMapsML-файла.
+        }, function (error){
+            alert('Ошибка: ' + error);
+        });
+}
