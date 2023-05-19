@@ -1,20 +1,21 @@
-ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
-            center: [55.751574, 37.573856],
-            zoom: 9
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
-
-
-	map.addControl(new ymaps.Zoom());
-	map.addControl(new ymaps.TypeControl());
-	map.addControl(new ymaps.ToolBar());
-
-    // Создание и добавление YMapsML-документа на карту
-  var ml = new ymaps.YMapsML("https://github.com/mininamaria/slexp/blob/main/YMapsML.xml");
-map.addOverlay(ml);
-
-   ymaps.Events.observe(ml, ml.Events.Fault, function (ml, error) {
-    alert("Произошла ошибка: " + error);
-});
+// Создание обработчика для события window.onLoad
+        YMaps.jQuery(function () {
+            // Создание экземпляра карты и его привязка к созданному контейнеру
+            var map = new YMaps.Map(YMaps.jQuery("#YMapsID")[0]);
+ 
+            // Установка для карты ее центра и масштаба
+            map.setCenter(new YMaps.GeoPoint(43.998779,56.316537), 13);
+			
+			map.addControl(new YMaps.Zoom());
+	        map.addControl(new YMaps.TypeControl());
+	        map.addControl(new YMaps.ToolBar());
+ 
+            // Создание и добавление YMapsML-документа на карту
+            var ml = new YMaps.YMapsML("http://webmap-blog.ru/xml/photo-map.xml");
+            map.addOverlay(ml);
+ 
+            // Обработчик неудачной загрузки YMapsML
+            YMaps.Events.observe(ml, ml.Events.Fault, function (ml, error) {
+                alert('Ошибка: ' + error);
+            });
+        });
