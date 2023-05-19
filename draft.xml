@@ -7,7 +7,7 @@
     <repr:Representation>
         <repr:Style gml:id="my_img">
             <repr:iconStyle>
-                <repr:href>https://github.com/SofyaVikhlyantseva/YMapsML-for-slexp/blob/main/image_commonStyle.jpg</repr:href>
+                <repr:href>https://raw.githubusercontent.com/SofyaVikhlyantseva/YMapsML-for-slexp/main/image_commonStyle.jpg</repr:href>
                 <repr:size x="54" y="42"></repr:size>
                 <repr:offset x="-27" y="-16"></repr:offset>
             </repr:iconStyle>
