@@ -5,42 +5,25 @@
              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
              xsi:schemaLocation="http://maps.yandex.ru/schemas/ymaps/1.x/ymaps.xsd">
     <repr:Representation>
-        <repr:Style gml:id="img1">
+        <repr:Style gml:id="styleCafe">
             <repr:iconStyle>
-                <repr:href>'https://www.google.com/search?q=%D0%BA%D0%BE%D0%B7%D0%B0&rlz=1C5CHFA_enGB1029RU1034&tbm=isch&source=iu&ictx=1&vet=1&fir=K-gXtyd9rYK3oM%252Cn1WdEaDOpSsGoM%252C%252Fm%252F03fwl%253Bs5L_VTrUbdYaxM%252CDtZqwYISPxPYFM%252C_%253B_47Go7YOHh6QPM%252CGGamuMZPuTTApM%252C_%253BUgtbCCLjyHzinM%252C3WRMPlEba3qqOM%252C_%253B9fukZppMIR3rzM%252CAaOeQy_qjDw9NM%252C_&usg=AI4_-kQLtw58fA0I-T7r-yph6IZL5g2vXg&sa=X&ved=2ahUKEwjVndryu4D_AhXT6CoKHQ8ZDTMQ_B16BAhlEAE#imgrc=K-gXtyd9rYK3oM'</repr:href>
-                <repr:size x="50" y="42"></repr:size>
+                <repr:href>https://sandbox.api.maps.yandex.net/examples/ru/2.1/ymapsml_styleobject/images/icon_cafe.png</repr:href>
+                <repr:size x="54" y="42"></repr:size>
                 <repr:offset x="-27" y="-16"></repr:offset>
             </repr:iconStyle>
-
-            <repr:balloonContentStyle>
-                <repr:template>#balloonTemplate</repr:template>
-            </repr:balloonContentStyle>
         </repr:Style>
-
-        <repr:Template gml:id="balloonTemplate">
-            <repr:text><![CDATA[
-                    <div style="font-size:12px;">
-                        <div style="color:#17202A;padding-bottom:5px;font-weight:bold">$[name]</div>
-                        <div align="center">$[metaDataProperty.AnyMetaData.img|не задан]</div>
-                    </div>]]></repr:text>
-        </repr:Template>
     </repr:Representation>
 
     <ymaps:GeoObjectCollection>
-        <gml:name>Объекты на карте</gml:name>
-        <ymaps:style>#img1</ymaps:style>
-        <gml:featureMembers>
+        <gml:featureMember>
             <ymaps:GeoObject>
-                <gml:name>Чудесная природа</gml:name>
-                <gml:metaDataProperty>
-                    <ymaps:AnyMetaData>
-                        <img src="https://www.google.com/search?q=%D0%BA%D0%BE%D0%B7%D0%B0&rlz=1C5CHFA_enGB1029RU1034&tbm=isch&source=iu&ictx=1&vet=1&fir=K-gXtyd9rYK3oM%252Cn1WdEaDOpSsGoM%252C%252Fm%252F03fwl%253Bs5L_VTrUbdYaxM%252CDtZqwYISPxPYFM%252C_%253B_47Go7YOHh6QPM%252CGGamuMZPuTTApM%252C_%253BUgtbCCLjyHzinM%252C3WRMPlEba3qqOM%252C_%253B9fukZppMIR3rzM%252CAaOeQy_qjDw9NM%252C_&usg=AI4_-kQLtw58fA0I-T7r-yph6IZL5g2vXg&sa=X&ved=2ahUKEwjVndryu4D_AhXT6CoKHQ8ZDTMQ_B16BAhlEAE#imgrc=K-gXtyd9rYK3oM"/>
-                    </ymaps:AnyMetaData>
-                </gml:metaDataProperty>
+                <ymaps:style>#styleCafe</ymaps:style>
+                <gml:name>Природа</gml:name>
+                <gml:description>Красивая природа</gml:description>
                 <gml:Point>
-                    <gml:pos>37.587937 55.733771</gml:pos>
+                    <gml:pos>37.561598 55.692394</gml:pos>
                 </gml:Point>
             </ymaps:GeoObject>
-        </gml:featureMembers>
+        </gml:featureMember>
     </ymaps:GeoObjectCollection>
 </ymaps:ymaps>
