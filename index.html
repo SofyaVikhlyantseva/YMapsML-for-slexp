@@ -11,6 +11,11 @@
     <title>Тут была ШЛ: фотографии с лингвистических экспедиций на карте</title>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=49277f8b-8642-48fa-84ac-62ef4428ec03&lang=ru_RU"
             type="text/javascript"></script>
+    <style>
+        html, body, #map {
+            width: 100%; height: 100%; padding: 0; margin: 0;
+        }
+    </style>
 </head>
 <body style="background-color:whitesmoke">
     <nav class="navbar navbar-expand-lg bg-light">
@@ -37,7 +42,7 @@
                 </form>
             </div>
             <div class="col-md-8">
-                <div id="YMapsID" style="width:800px; height:600px;"></div>
+                <div id="map"></div>
             </div>
         </div>
     </div>
